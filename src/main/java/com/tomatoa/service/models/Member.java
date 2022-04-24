@@ -1,12 +1,17 @@
 package com.tomatoa.service.models;
 
+import lombok.Getter;
+import lombok.Setter;
 
-import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
-@Data
+/**
+ * @deprecated
+ */
 @Entity
+@Getter
+@Setter
 @Table(name = "members")
 public class Member {
 

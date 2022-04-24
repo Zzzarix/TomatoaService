@@ -10,8 +10,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "channels")
-public class Channel {
+public class Contact {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

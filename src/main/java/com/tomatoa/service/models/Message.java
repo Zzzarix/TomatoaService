@@ -1,12 +1,16 @@
 package com.tomatoa.service.models;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Map;
+import java.util.Objects;
 
-@Data
 @Entity
-public class Message {
+@Getter
+@Setter
+public class Message implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,5 +21,8 @@ public class Message {
     private String content;
 
     @Column(name = "authorId")
-    private Integer authorId;
+    private Long authorId;
+
+    @Column(name = "chanId")
+    private Long chanId;
 }
